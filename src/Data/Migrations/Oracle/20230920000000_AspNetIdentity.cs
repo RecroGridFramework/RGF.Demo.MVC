@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RGF.Demo.MVC.Data.Migrations.Oracle
 {
-    public partial class aspnetidentity : Migration
+    public partial class AspNetIdentity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

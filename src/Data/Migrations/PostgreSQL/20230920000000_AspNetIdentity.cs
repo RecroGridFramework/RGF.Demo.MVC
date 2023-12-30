@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace RGF.Demo.MVC.Data.Migrations.PostgreSQL
 {
-    public partial class aspnetidentity : Migration
+    public partial class AspNetIdentity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
