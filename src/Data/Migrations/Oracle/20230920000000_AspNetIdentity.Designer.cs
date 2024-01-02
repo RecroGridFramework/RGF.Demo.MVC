@@ -13,7 +13,7 @@ namespace RGF.Demo.MVC.Data.Migrations.Oracle
 {
     [DbContext(typeof(AspNetIdentityDbContextOracle))]
     [Migration("20230920000000_aspnetidentity")]
-    partial class aspnetidentity
+    partial class AspNetIdentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
