@@ -9,17 +9,18 @@ using RGF.Demo.MVC.Data;
 
 #nullable disable
 
-namespace RGF.Demo.MVC.Data.Migrations.PostgreSQL
+namespace RGF.DemoMVC.Data.Migrations.PostgreSQL
 {
     [DbContext(typeof(AspNetIdentityDbContextPostgreSQL))]
-    [Migration("20230920000000_aspnetidentity")]
+    [Migration("20240325114244_aspnetidentity")]
     partial class AspNetIdentity
     {
+        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.22")
+                .HasAnnotation("ProductVersion", "8.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);

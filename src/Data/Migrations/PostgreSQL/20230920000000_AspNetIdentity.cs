@@ -4,10 +4,12 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace RGF.Demo.MVC.Data.Migrations.PostgreSQL
+namespace RGF.DemoMVC.Data.Migrations.PostgreSQL
 {
+    /// <inheritdoc />
     public partial class AspNetIdentity : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -193,6 +195,7 @@ namespace RGF.Demo.MVC.Data.Migrations.PostgreSQL
                 unique: true);
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
