@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace RGF.Demo.MVC.Data.Migrations.Oracle
+namespace RGF.DemoMVC.Data.Migrations.Oracle
 {
+    /// <inheritdoc />
     public partial class AspNetIdentity : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -194,6 +196,7 @@ namespace RGF.Demo.MVC.Data.Migrations.Oracle
                 filter: "\"NORMALIZEDUSERNAME\" IS NOT NULL");
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

@@ -8,7 +8,7 @@ using RGF.Demo.MVC.Data;
 
 #nullable disable
 
-namespace RGF.Demo.MVC.Data.Migrations.PostgreSQL
+namespace RGF.DemoMVC.Data.Migrations.PostgreSQL
 {
     [DbContext(typeof(AspNetIdentityDbContextPostgreSQL))]
     partial class AspNetIdentityDbContextPostgreSQLModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace RGF.Demo.MVC.Data.Migrations.PostgreSQL
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.22")
+                .HasAnnotation("ProductVersion", "8.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);

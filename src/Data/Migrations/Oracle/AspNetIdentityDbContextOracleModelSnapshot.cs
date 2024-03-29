@@ -8,7 +8,7 @@ using RGF.Demo.MVC.Data;
 
 #nullable disable
 
-namespace RGF.Demo.MVC.Data.Migrations.Oracle
+namespace RGF.DemoMVC.Data.Migrations.Oracle
 {
     [DbContext(typeof(AspNetIdentityDbContextOracle))]
     partial class AspNetIdentityDbContextOracleModelSnapshot : ModelSnapshot
@@ -17,10 +17,10 @@ namespace RGF.Demo.MVC.Data.Migrations.Oracle
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.22")
+                .HasAnnotation("ProductVersion", "8.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -61,7 +61,7 @@ namespace RGF.Demo.MVC.Data.Migrations.Oracle
                         .HasColumnType("NUMBER(10)")
                         .HasColumnName("ID");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("NVARCHAR2(2000)")
@@ -173,7 +173,7 @@ namespace RGF.Demo.MVC.Data.Migrations.Oracle
                         .HasColumnType("NUMBER(10)")
                         .HasColumnName("ID");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("NVARCHAR2(2000)")
