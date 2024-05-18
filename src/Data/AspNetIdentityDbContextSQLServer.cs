@@ -58,7 +58,7 @@ public static class WebApplicationBuilderExtensions
 
             case DBTypeEnum.Oracle:
                 services.AddDbContext<AspNetIdentityDbContextOracle>(options =>
-                    options.UseOracle(RGDataContext.DefaultConnectionString));
+                    options.UseOracle(RGDataContext.DefaultConnectionString, o => o.UseOracleSQLCompatibility(OracleSQLCompatibility.DatabaseVersion21)));
                 break;
         }
 
