@@ -7,15 +7,10 @@ namespace RGF.Demo.MVC.Controllers
 {
     public class NorthwindController : Controller
     {
-        /*public NorthwindController(BaseDbContextPool dbContext)
-        {
-            this.RGDbContext = new RecroGridDbContext(dbContext);
-        }*/
-
-        public NorthwindController(ILogger<NorthwindController> logger, IRGFDataContextService dataContext)
+        public NorthwindController(ILogger<NorthwindController> logger, IRGDataContextFactoryService rgDataContextFactory)
         {
             _logger = logger;
-            this.RGDbContext = dataContext.RGDbContext;
+            this.RGDbContext = rgDataContextFactory.CreateRGDataContext().RGDbContext;
         }
 
         protected readonly ILogger _logger;
