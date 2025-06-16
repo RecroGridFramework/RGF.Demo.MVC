@@ -43,7 +43,7 @@ public static class WebApplicationBuilderExtensions
     public static void AddAspNetIdentity(this WebApplicationBuilder builder)
     {
         var services = builder.Services;
-        var dbType = RGDataContext.ConnectionNameDBType;
+        var dbType = RGDataContext.DatabaseTypeFromConnectionName;
         switch (dbType)
         {
             case DBTypeEnum.SQLServer:
@@ -101,7 +101,7 @@ public static class WebApplicationBuilderExtensions
     {
         using (var serviceScope = app.Services.CreateScope())
         {
-            var dbType = RGDataContext.ConnectionNameDBType;
+            var dbType = RGDataContext.DatabaseTypeFromConnectionName;
             IdentityDbContext? dbContext = null;
             switch (dbType)
             {
